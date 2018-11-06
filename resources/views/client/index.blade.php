@@ -10,7 +10,7 @@
                 <p class="card-header-title">
                     Clients
                 </p>
-                <a href="#" class="card-header-icon" aria-label="more options">
+                <a href="{{ route('client.create') }}" class="card-header-icon" aria-label="more options">
                     <span class="icon">
                         <i class="fas fa-plus" aria-hidden="true"></i>
                     </span>

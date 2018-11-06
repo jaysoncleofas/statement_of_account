@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Client;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        return view('client.create');
     }
 
     /**
@@ -36,7 +37,24 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'           => 'required|string|unique:clients|max:255',
+            'billingAddress' => 'required|string|max:255',
+            'contactNumber'  => 'required|string|max:255',
+        ]);
+        
+        $user = Auth::user();
+
+        $user->clients()->create([
+            'name' => $request->name,
+            'address' => $request->billingAddress,
+            'contact' => $request->contactNumber,
+        ]);
+
+        session()->flash('status', 'Success');
+        session()->flash('type', 'success');
+
+        return redirect()->route('client.index');
     }
 
     /**
