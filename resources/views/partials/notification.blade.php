@@ -1,5 +1,6 @@
 @if (session('status'))
-    <div class="alert alert-success" role="alert">
+    <div class="notification is-primary">
+        <button class="delete"></button>
         {{ session('status') }}
     </div>
 @endif
