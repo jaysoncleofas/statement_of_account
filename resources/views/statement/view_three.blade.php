@@ -25,7 +25,6 @@
 
 <body>
     <div class="container mb-5">
-        <a href="javascript:void(0)" id="savepdf" class="btn btn-primary float-right mt-1">Save as PDF</a>
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <img src="{{ asset('img/nextvation-logo.png') }}" class="img-fluid" alt="" style="width:80%;">   
@@ -35,6 +34,7 @@
                 </p> -->
             </div>
             <div class="col-md-6 text-center">
+                <a href="javascript:void(0)" id="savepdf" class="btn btn-primary float-right mt-1" style="position:absolute;right:0;">Save as PDF</a>
                 <p>
                     <strong>NEXTVATION SOFTWARE SOLUTIONS</strong> <br>
                     Suite 105, Clark Welcome Center Office Suites, <br>
