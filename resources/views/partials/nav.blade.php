@@ -1,7 +1,7 @@
 <nav class="navbar is-info is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item">
+            <a href="/home" class="navbar-item">
             <img src="{{ asset('img/nextvation-logo.png') }}" alt="">
             </a>
 
@@ -16,13 +16,16 @@
             <!-- navbar start, navbar end -->
             <div class="navbar-end">
                 @guest
-                    <a class="navbar-item" href="{{ route('login') }}">
+                    {{-- <a class="navbar-item" href="{{ route('login') }}">
                         Login
                     </a>
                     <a class="navbar-item" href="{{ route('register') }}">
                         Register
-                    </a>    
+                    </a>     --}}
                 @else 
+                    <a class="navbar-item" href="{{ route('home') }}">
+                       Statement of Account
+                    </a>
                     <a class="navbar-item" href="{{ route('client.index') }}">
                         Clients
                     </a>

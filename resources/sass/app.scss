@@ -18,3 +18,8 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+.table__wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+}

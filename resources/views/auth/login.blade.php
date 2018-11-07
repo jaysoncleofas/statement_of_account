@@ -49,9 +49,9 @@
                             <div class="control is-expanded">
                                 <button type="submit" class="button is-primary">Log in</button>
                             </div>
-                            <div class="control">
+                            {{-- <div class="control">
                                 <a class="button is-text" href="{{ route('password.request') }}">Forgot password?</a>
-                            </div>
+                            </div> --}}
                         </div>
 
                     </form>
